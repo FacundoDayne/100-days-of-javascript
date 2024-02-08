@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>My Turn | #2 - Online Text Editor</title>
+</head>
+<body>
+<!-- Icons came from fontawesome.com -->
+    <div class="panel">
+        <div class="options-div">
+            <!-- Bold Button -->
+            <button id="btnBold" class="option-button format" data-command="bold">
+                <i class="fa-solid fa-bold"></i>
+            </button>
+            <!-- Italic Button -->
+            <button id="btnItalic" class="option-button format" data-command="italic">
+                <i class="fa-solid fa-italic"></i>
+            </button>
+            <!-- Underline Button -->
+            <button id="btnUnderline" class="option-button format"data-command="underline">
+                <i class="fa-solid fa-underline"></i>
+            </button>
+            <!-- Superscript Button-->
+            <button id="btnSuperscript" class="script">
+                <i class="fa-solid fa-superscript"></i>
+            </button>
+            <!-- Subscript Button -->
+            <button id="btnSubscript" class="script">
+                <i class="fa-solid fa-subscript"></i>
+            </button>
+            <!-- Ordered List Button -->
+            <button id="btnOrderedList">
+                <i class="fa-solid fa-list-ol"></i>
+            </button>
+            <!-- Unordered List Button -->
+            <button id="btnUnorderedList">
+                <i class="fa-solid fa-list"></i>
+            </button>
+            <!-- Undo Button -->
+            <button id="btnUndo">
+                <i class="fa-solid fa-rotate-left"></i>
+            </button>
+            <!-- Redo Button -->
+            <button id="btnRedo">
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
+            <!-- Hyperlink Button -->
+            <button id="btnHyperlink" data-command="createLink" class="adv-option-button">
+                <i class="fa fa-link"></i>
+            </button>
+            <!-- Unlink Button -->
+            <button id="btnUnlink" data-command="unlink" class="option-button">
+                <i class="fa fa-unlink"></i>
+            </button>
+            <!-- Left Align Button -->
+            <button id="btnLeftAlign" class="align active">
+                <i class="fa-solid fa-align-left"></i>
+            </button>
+            <!-- Center Align Button -->
+            <button id="btnCenterAlign" class="align">
+                <i class="fa-solid fa-align-center"></i>
+            </button>
+            <!-- Right Align Button -->
+            <button id="btnRightAlign" class="align">
+                <i class="fa-solid fa-align-right"></i>
+            </button>
+            <!-- Justify Button -->
+            <button id="btnJustify" class="align">
+                <i class="fa-solid fa-align-justify"></i>
+            </button>
+            <!-- Indent Button -->
+            <button id="btnIndent" class="spacing">
+                <i class="fa-solid fa-indent"></i>
+            </button>
+            <!-- Outdent Button -->
+            <button id="btnOutdent" class="spacing">
+                <i class="fa-solid fa-outdent"></i>
+            </button>      
+        </div>
+        <div class="options-div">
+            <!-- Drop down menu for headings-->
+            <label for="dropDownHeadings">Headings</label>
+            <select id="dropDownHeadings" class="adv-option-button" data-command="formatBlock">
+                <option value="H1">H1</option>
+                <option value="H2">H2</option>
+                <option value="H3">H3</option>
+                <option value="H4">H4</option>
+                <option value="H5">H5</option>
+                <option value="H6">H6</option>
+            </select>
+
+            <!-- Drop down menu for fonts-->
+            <label for="dropDownFontName">Fonts</label>
+            <select id="dropDownFontName" class="adv-option-button" data-command="fontName"></select>
+
+            <!-- Drop down menu for font sizes-->
+            <label for="dropDownFontSize">Size</label>
+            <select id="dropDownFontSize" class="adv-option-button" data-command="fontSize"></select>
+
+            <!-- Forecolor Button -->
+            <div>
+                <label for="btnForeColor">Forecolor</label>
+                <input type="color" id="btnForeColor" data-command="foreColor" class="adv-option-button"/>
+            </div>
+
+            <!-- Backcolor Button -->
+            <div>
+                <label for="btnBackColor">Backcolor</label>
+                <input type="color" id="btnBackColor"  data-command="backColor" class="adv-option-button"/>
+            </div>
+        </div>
+        <div id="text-field" contenteditable="true" ></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
