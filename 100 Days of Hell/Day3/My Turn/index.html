@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>My Turn | #3 - Password Generator </title>
+</head>
+
+<body>
+
+    <div class="container-panel">
+        <h2>Password Generator</h2>
+
+        <div class="wrapper-panel">
+            <div class="input-box">
+                <input type="text" disabled />
+                <!-- Icon from Google Fonts -->
+                <span class="material-symbols-rounded">copy_all</span>
+            </div>
+
+            <div class="password-indicator"></div>
+            <div class="password-length">
+                <div class="password-details">
+                    <label class="label-title">Password Length</label>
+                    <span id="password-length-span"></span>
+                </div>
+                <input id="password-length-slider" type="range" min="5" max="20" value="5" step="1">
+            </div>
+
+            <div class="password-settings">
+                <label class="label-title">Password Settings</label>
+                <ul class="password-options">
+                    <li class="password-fine-option">
+                        <input type="checkbox" id="wantLowercase" checked />
+                        <label for="wantLowercase">Lowercase (a-z)</label>
+                    </li>
+                    <li class="password-fine-option">
+                        <input type="checkbox" id="wantUppercase">
+                        <label for="wantUppercase">Uppercase (A-Z)</label>
+                    </li>
+                    <li class="password-fine-option">
+                        <input type="checkbox" id="wantNumbers">
+                        <label for="wantNumbers">Numbers (0-9)</label>
+                    </li>
+                    <li class="password-fine-option">
+                        <input type="checkbox" id="wantSymbols">
+                        <label for="wantSymbols">Symbols (!-$^+)</label>
+                    </li>
+                    <li class="password-fine-option">
+                        <input type="checkbox" id="wantDuplicate">
+                        <label for="wantDuplicate">Duplicate Ok</label>
+                    </li>
+                    <li class="password-fine-option">
+                        <input type="checkbox" id="wantSpaces">
+                        <label for="wantSpaces">Spaces Ok</label>
+                    </li>
+                </ul>
+            </div>
+
+            <button id="generate-button">Generate Button</button>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
